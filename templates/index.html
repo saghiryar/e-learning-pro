@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title> E-Learning</title>
+
+</head>
+
+<body>
+  <section class="main-content">
+    <h1 class="header">E-Learning Platform</h1>
+
+    <label for="Register">Register</label>
+    <form action="/register" method="post">
+      Username: <input type="text" name="username" required><br>
+      Password: <input type="password" name="password" required><br>
+      <input type="submit" value="Register">
+    </form>
+
+    <hr>
+
+    <label for="login">login</label>
+    <form action="/login" method="post">
+      Username: <input type="text" name="username" required><br>
+      Password: <input type="password" name="password" required><br>
+      <input type="submit" value="Login">
+    </form>
+
+    <hr>
+
+    <label for="course">Add course</label>
+    <form action="/add_course" method="post">
+      Course Name: <input type="text" name="course" required><br>
+      <input type="submit" value="Add Course">
+    </form>
+
+    <hr>
+
+    <h2>Show Courses</h2>
+    <ul>
+      <li>HTML Basics</li>
+      <li>Python Programming</li>
+      <li>Database Management</li>
+    </ul>
+
+    <hr>
+
+    <h2>Quiz</h2>
+    <form action="/quiz" method="post">
+      1. Python is a programming language?<br>
+      <input type="radio" name="q1" value="yes"> Yes
+      <input type="radio" name="q1" value="no"> No
+      <br><br>
+      <input type="submit" value="Submit Quiz">
+    </form>
+
+    <hr>
+
+    <h2>Show Progress</h2>
+    <p>Your progress will appear here.</p>
+
+    <hr>
+
+    <h2>Exit</h2>
+    <p>Thank you for using the E-Learning Platform.</p>
+  </section>
+</body>
+
+</html>
