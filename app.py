@@ -4,7 +4,7 @@ import sqlite3
 app = Flask(__name__)
 
 # Connect database (Video Style)
-conn = sqlite3.connect('/:memory:', check_same_thread=False)
+conn = sqlite3.connect(':memory:', check_same_thread=False)
 cursor = conn.cursor()
 
 # Create tables
